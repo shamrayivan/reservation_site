@@ -35,6 +35,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
             ListView(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                const SizedBox(height: 6,),
                 const Center(
                   child: Text(
                     'Игуана',
@@ -45,7 +46,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                   ),
                 ),
                 const SizedBox(
-                  height: 24,
+                  height: 26,
                 ),
                 const Center(
                   child: Text(
@@ -57,7 +58,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                   ),
                 ),
                 const SizedBox(
-                  height: 22,
+                  height: 24,
                 ),
                 Column(
                   children: [
@@ -83,7 +84,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                       ),
                     ),
                     const SizedBox(
-                      height: 8,
+                      height: 10,
                     ),
                     const Text(
                       'Желаемая дата и время *',
@@ -226,7 +227,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                       ),
                     ),
                     const SizedBox(
-                      height: 8,
+                      height: 10,
                     ),
                     const Text(
                       'Примерное количество персон *',
@@ -236,7 +237,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                       ),
                     ),
                     const SizedBox(
-                      height: 2,
+                      height: 4,
                     ),
                     SizedBox(
                       height: 50,
@@ -304,7 +305,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                       ),
                     ),
                     const SizedBox(
-                      height: 8,
+                      height: 16,
                     ),
                     const Text(
                       'Номер телефона *',
@@ -322,7 +323,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                           )),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 12,
                     ),
                     const Text(
                       'Оставьте Ваши пожелания',
