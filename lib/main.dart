@@ -5,7 +5,7 @@ import 'package:reservation_site/dio/dio.dart';
 import 'package:reservation_site/ui/screens/reservation_screen/reservation_screen.dart';
 
 void main() {
-  DioManager().init();
+  DioManager.init();
   runApp(const MyApp());
 }
 
@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.black,
+    ));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -28,7 +31,9 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          scaffoldBackgroundColor: Colors.black,
+          secondaryHeaderColor: Colors.black,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
         fontFamily: 'PosteRetro'
       ),

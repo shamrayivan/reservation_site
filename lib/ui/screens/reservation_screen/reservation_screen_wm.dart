@@ -5,6 +5,8 @@ import 'package:reservation_site/model/common/widget_model_standart.dart';
 import 'package:reservation_site/repositories/request_repository.dart';
 import 'dart:js' as js;
 
+import 'package:reservation_site/ui/screens/thank_screen/thank_screen.dart';
+
 class ReservationScreenWm extends WidgetModelStandard {
   final nameController = TextEditingAction();
   final phoneController = TextEditingAction();
@@ -43,29 +45,14 @@ class ReservationScreenWm extends WidgetModelStandard {
       doFutureHandleError(
           RequestRepository.createRequest(
               guestName: nameController.controller.text,
-              guestPhone: '7${phoneController.controller.text}',
-              persons: personState.value ?? 0,
+              guestPhone: '${phoneController.controller.text}',
+              persons: personState.value.toString(),
               dateStart: dateState.value.toString(),
-              note: noteController.controller.text), onValue: (value) {
+              note: noteController.controller.text), onValue: (value) async {
         if (context != null) {
-          showDialog(
-            context: context,
-            builder: (context) {
-              return SizedBox(
-                width: 300,
-                child: Center(
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(12))),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text('Заявка на бронирование отправлена. Скоро с Вами свяжутся :)'),
-                    ),
-                  ),
-                ),
-              );
-            },
-          );
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Заявка на бронирование отправлена. Скоро с Вами свяжутся :)'),));
+          await Future.delayed(Duration(seconds: 1));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ThankScreen()),);
         }
       }, onError: (e, s) {
         if (context != null) {

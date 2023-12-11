@@ -15,7 +15,7 @@ class PhoneTextFormField extends StatelessWidget {
   required this.phoneController,
   this.textStyle,
   this.borderRadius,
-  this.autofocus = true,
+  this.autofocus = false,
   super.key, this.cursorColor, this.onChanged,
 });
 

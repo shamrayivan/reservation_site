@@ -46,6 +46,7 @@ dependencies:
     git:
       path: packages/mwwm
       url: https://github.com/Evoswork/SurfGear.git
+  http: ^1.1.2
 
 dev_dependencies:
   flutter_localizations:

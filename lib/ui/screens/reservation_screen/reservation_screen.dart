@@ -274,7 +274,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                                         height: 40,
                                         decoration: BoxDecoration(
                                           border: Border.all(
-                                            width: 0.1,
+                                            width: 0.5,
                                               color: index + 1 != countPerson ? Colors.amberAccent : Colors.white),
                                             shape: BoxShape.circle,
                                             color: index + 1 == countPerson
@@ -286,7 +286,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
                                             style: TextStyle(
                                               color: index + 1 == countPerson
                                                   ? Colors.black
-                                                  : Colors.amberAccent,
+                                                  : Colors.white,
                                             ),
                                           ),
                                         ),

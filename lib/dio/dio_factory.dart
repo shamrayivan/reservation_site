@@ -15,6 +15,14 @@ class DioFactory {
   Future<List<Interceptor>> _createInterceptors() async {
     final interceptors = <Interceptor>[
       InterceptorsWrapper(
+        onRequest:  (options, handler) {
+          options.headers['Content-Type'] = 'application/json';
+          options.headers['Access-Control-Allow-Origin'] = '*';
+          options.headers['Accept'] = 'application/json';
+          return handler.next(options);
+        }
+      ),
+      InterceptorsWrapper(
         onRequest: (option, handler) {
           print('url: ${option.uri} \ndata: ${option.data}');
           return handler.next(option);
