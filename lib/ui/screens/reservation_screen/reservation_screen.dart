@@ -29,7 +29,7 @@ class _ReservationScreenState extends WidgetState<ReservationScreenWm> {
           alignment: Alignment.topCenter,
           children: [
             Image.asset(
-              'assets/images/backgroundImage.png',
+              'assets/images/backgroundImage.webp',
               fit: BoxFit.cover,
             ),
             ListView(

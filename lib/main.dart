@@ -22,24 +22,20 @@ class MyApp extends StatelessWidget {
       statusBarColor: Colors.black,
     ));
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      supportedLocales: const [Locale('ru', 'RU')],
-      localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
-        GlobalCupertinoLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.black,
-          secondaryHeaderColor: Colors.black,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-        useMaterial3: true,
-        fontFamily: 'PosteRetro'
-      ),
-      home: ReservationScreen(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Iguana',
+        supportedLocales: const [Locale('ru', 'RU')],
+        localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
+          GlobalCupertinoLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.black,
+            secondaryHeaderColor: Colors.black,
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+            useMaterial3: true,
+            fontFamily: 'PosteRetro'),
+        home: ReservationScreen());
   }
 }
-
-
